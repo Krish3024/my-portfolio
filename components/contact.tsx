@@ -70,7 +70,7 @@ export default function Contact() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Get In Touch</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I'm always open to discussing new opportunities, interesting projects, or just having a chat about
+            I&apos;m always open to discussing new opportunities, interesting projects, or just having a chat about
             technology.
           </p>
         </div>
@@ -97,7 +97,7 @@ export default function Contact() {
                       </div>
                       <div className="ml-3">
                         <p className="text-sm font-medium text-green-800 dark:text-green-200">
-                          Message sent successfully! I'll get back to you soon.
+                          Message sent successfully! I&apos;ll get back to you soon.
                         </p>
                       </div>
                     </div>
@@ -245,7 +245,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Phone</p>
-                      <p className="text-muted-foreground">+91 (XXX) XXX-XXXX</p>
+                      <p className="text-muted-foreground">+91-7440965103</p>
                     </div>
                   </div>
 
@@ -286,7 +286,7 @@ export default function Contact() {
                 </div>
 
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Feel free to connect with me on social media or check out my latest projects on GitHub. I'm always
+                  Feel free to connect with me on social media or check out my latest projects on GitHub. I&apos;m always
                   open to networking and collaboration opportunities.
                 </p>
               </CardContent>
