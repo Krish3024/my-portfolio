@@ -10,7 +10,7 @@ const stats = [
   {
     icon: Code,
     label: "LeetCode Problems",
-    value: 450,
+    value: 370,
     max: 500,
     color: "text-orange-500",
     bgColor: "bg-orange-500/10",
@@ -19,29 +19,29 @@ const stats = [
   {
     icon: Trophy,
     label: "Next.js Proficiency",
-    value: 92,
+    value: 80,
     max: 100,
     color: "text-blue-500",
     bgColor: "bg-blue-500/10",
     description: "Advanced level with SSR & SSG",
   },
-  {
-    icon: Zap,
-    label: "React.js Skills",
-    value: 95,
-    max: 100,
-    color: "text-cyan-500",
-    bgColor: "bg-cyan-500/10",
-    description: "Expert in hooks, context & performance",
-  },
+  //   {
+  //   icon: Zap,
+  //   label: "React.js Skills",
+  //   value: 70,
+  //   max: 100,
+  //   color: "text-cyan-500",
+  //   bgColor: "bg-cyan-500/10",
+  //   description: "Expert in hooks, context & performance",
+  // },
 ]
 
 const achievements = [
-  { icon: Star, label: "GitHub Stars", value: "1.2K+", color: "text-yellow-500" },
-  { icon: Code, label: "Contributions", value: "500+", color: "text-green-500" },
+  { icon: Star, label: "GitHub Stars", value: "20+", color: "text-yellow-500" },
+  { icon: Code, label: "Contributions", value: "30+", color: "text-green-500" },
   { icon: Calendar, label: "Experience", value: "3+ Years", color: "text-blue-500" },
-  { icon: Award, label: "Projects", value: "25+", color: "text-purple-500" },
-  { icon: Users, label: "Collaborations", value: "15+", color: "text-pink-500" },
+  { icon: Award, label: "Projects", value: "15+", color: "text-purple-500" },
+  { icon: Users, label: "Collaborations", value: "5+", color: "text-pink-500" },
   { icon: TrendingUp, label: "Success Rate", value: "98%", color: "text-emerald-500" },
 ]
 
@@ -120,7 +120,7 @@ export default function About() {
         About Me
       </h2>
       <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-        I&apos;m a passionate full-stack developer with expertise in modern web technologies...
+        I&apos;m a passionate full-stack developer with expertise in modern web technologies
       </p>
       <div className="mt-6 w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
     </div>
@@ -135,15 +135,6 @@ export default function About() {
         <h3 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-foreground">
           My Journey
         </h3>
-        <p className="text-muted-foreground mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed hover:text-foreground">
-          With over 3 years of experience...
-        </p>
-        <p className="text-muted-foreground mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed hover:text-foreground">
-          I&apos;m constantly learning...
-        </p>
-        <p className="text-muted-foreground mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed hover:text-foreground">
-          When I&apos;m not coding...
-        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {achievements.map((achievement, index) => {

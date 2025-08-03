@@ -22,7 +22,7 @@ const projects = [
       "A comprehensive digital library management system with features for book lending, returns, ebook access, and donation management. Built with modern web technologies.",
     image:
       bookhive.src,
-    technologies: ["Next.js", "React", "Tailwind CSS", "Node.js"],
+    technologies: ["Next.js", "Face-API", "Tailwind CSS", "Node.js"],
     github: "https://github.com/Krish3024/libathon",
     live: "https://libathon.vercel.app/",
     stars: 15,
@@ -32,9 +32,9 @@ const projects = [
     id: 2,
     title: "License Plate Detection",
     description:
-      "An AI-powered license plate detection system using computer vision and machine learning algorithms for automatic vehicle identification and tracking.",
+      "An AI-powered license plate detection system using computer vision and deep learning algorithms for automatic vehicle identification.",
     image: lisenceplate.src,
-    technologies: ["Python", "OpenCV", "TensorFlow", "Flask"],
+    technologies: ["Next.js", "OpenCV", "YOLO", "Flask"],
     github: "https://github.com/Krish3024/lisence-plate-app",
     live: "https://lisence-plate-app.vercel.app/",
     stars: 12,
@@ -44,9 +44,9 @@ const projects = [
     id: 3,
     title: "Fintel",
     description:
-      "A financial intelligence platform providing market insights, portfolio tracking, and investment analytics with real-time data visualization.",
+      "A financial intelligence platform providing stock price prediction using machine learning and market insights and investment analytics with real-time data visualization.",
     image: fintel.src,
-    technologies: ["React", "D3.js", "Node.js", "MongoDB"],
+    technologies: ["Prophet", "Next.js", "MongoDB"],
     github: "https://github.com/Krish3024/fintel",
     live: "https://fintel-eight.vercel.app/",
     stars: 23,
@@ -58,7 +58,7 @@ const projects = [
     description:
       "A food sharing platform connecting food donors with those in need, reducing food waste while helping communities through efficient food distribution.",
     image: hungerhelpers.src,
-    technologies: ["React", "Node.js", "Express", "MongoDB"],
+    technologies: ["Next.js", "Node.js", "Express", "MongoDB"],
     github: "https://github.com/Krish3024/food-sharing-app",
     live: "https://food-sharing-app-three.vercel.app/",
     stars: 18,
@@ -70,7 +70,7 @@ const projects = [
     description:
       "Real-time chat application with user authentication, message encryption, file sharing, and group chat functionality using Socket.io for instant messaging.",
     image: chatapp.src,
-    technologies: ["React", "Socket.io", "JWT", "Node.js"],
+    technologies: ["React", "Socket.io", "JWT", "Firebase"],
     github: "https://github.com/Krish3024/ChatApp",
     live: "https://chat-app-smoky-mu.vercel.app/",
     stars: 31,
