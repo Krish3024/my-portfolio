@@ -11,7 +11,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "John Doe - Full Stack Developer",
+  title: "Krish Sahu - Full Stack Developer",
   description:
     "Portfolio website of John Doe, a passionate full-stack developer specializing in modern web technologies.",
 }
