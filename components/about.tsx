@@ -104,115 +104,116 @@ export default function About() {
 
   return (
     <section
-      ref={sectionRef}
-      id="about"
-      className={`py-24 bg-gradient-to-br from-muted/30 to-muted/10 transition-all duration-1000 ease-out ${
-        isVisible ? "opacity-100" : "opacity-0"
+  ref={sectionRef}
+  id="about"
+  className={`py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-muted/30 to-muted/10 transition-all duration-1000 ease-out ${
+    isVisible ? "opacity-100" : "opacity-0"
+  }`}
+>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div
+      className={`text-center mb-16 sm:mb-20 transition-all duration-800 ease-out ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          className={`text-center mb-20 transition-all duration-800 ease-out ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">About Me</h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            I&apos;m a passionate full-stack developer with expertise in modern web technologies. I love building scalable
-            applications and solving complex algorithmic problems.
-          </p>
-          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
-        </div>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
+        About Me
+      </h2>
+      <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+        I&apos;m a passionate full-stack developer with expertise in modern web technologies...
+      </p>
+      <div className="mt-6 w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
+    </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          <div
-            className={`transition-all duration-800 ease-out ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
-            }`}
-          >
-            <h3 className="text-3xl font-semibold mb-8 text-foreground">My Journey</h3>
-            <p className="text-muted-foreground mb-6 text-lg leading-relaxed transition-all duration-500 hover:text-foreground">
-              With over 3 years of experience in web development, I&apos;ve worked on various projects ranging from
-              e-commerce platforms to data visualization tools. My passion lies in creating efficient, user-friendly
-              applications that solve real-world problems.
-            </p>
-            <p className="text-muted-foreground mb-6 text-lg leading-relaxed transition-all duration-500 hover:text-foreground">
-              I&apos;m constantly learning new technologies and improving my problem-solving skills through competitive
-              programming and open-source contributions. I believe in writing clean, maintainable code and following
-              best practices.
-            </p>
-            <p className="text-muted-foreground mb-8 text-lg leading-relaxed transition-all duration-500 hover:text-foreground">
-              When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects, or
-              sharing knowledge with the developer community.
-            </p>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-start">
+      {/* Left Column */}
+      <div
+        className={`transition-all duration-800 ease-out ${
+          isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+        }`}
+      >
+        <h3 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-foreground">
+          My Journey
+        </h3>
+        <p className="text-muted-foreground mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed hover:text-foreground">
+          With over 3 years of experience...
+        </p>
+        <p className="text-muted-foreground mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed hover:text-foreground">
+          I&apos;m constantly learning...
+        </p>
+        <p className="text-muted-foreground mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed hover:text-foreground">
+          When I&apos;m not coding...
+        </p>
 
-            <div className="grid grid-cols-2 gap-6">
-              {achievements.map((achievement, index) => {
-                const Icon = achievement.icon
-                return (
-                  <div
-                    key={index}
-                    className={`flex items-center gap-4 p-4 rounded-xl bg-card border hover:shadow-lg transition-all duration-700 ease-out ${
-                      isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                    }`}
-                    style={{
-                      transitionDelay: isVisible ? `${500 + index * 100}ms` : "0ms",
-                    }}
-                  >
-                    <div className="p-2 bg-primary/10 rounded-lg transition-all duration-300">
-                      <Icon className={`h-6 w-6 ${achievement.color}`} />
-                    </div>
-                    <div>
-                      <p className="font-bold text-lg text-foreground">{achievement.value}</p>
-                      <p className="text-sm text-muted-foreground">{achievement.label}</p>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-
-          <div className={`space-y-8 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}>
-            {stats.map((stat, index) => {
-              const Icon = stat.icon
-              const percentage = (animatedValues[index] / stat.max) * 100
-
-              return (
-                <Card
-                  key={index}
-                  className={`border-2 border-border ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  }`}
-                >
-                  <CardContent className="p-8">
-                    <div className="flex items-center gap-6 mb-6">
-                      <div className={`p-4 ${stat.bgColor} rounded-2xl`}>
-                        <Icon className={`h-8 w-8 ${stat.color}`} />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex justify-between items-center mb-3">
-                          <span className="font-semibold text-lg text-foreground">{stat.label}</span>
-                          <div className="flex items-center gap-3">
-                            <span className="text-2xl font-bold text-foreground">
-                              {animatedValues[index]}
-                              {stat.max === 100 ? "%" : `/${stat.max}`}
-                            </span>
-                            <Badge variant="secondary" className="text-sm font-medium">
-                              {stat.max === 100 ? "Expert" : "Active"}
-                            </Badge>
-                          </div>
-                        </div>
-                        <Progress value={percentage} className="h-4 mb-3" />
-                        <p className="text-sm text-muted-foreground leading-relaxed">{stat.description}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          {achievements.map((achievement, index) => {
+            const Icon = achievement.icon
+            return (
+              <div
+                key={index}
+                className={`flex items-center gap-4 p-4 rounded-xl bg-card border hover:shadow-lg transition-all duration-700 ease-out ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                }`}
+                style={{
+                  transitionDelay: isVisible ? `${500 + index * 100}ms` : "0ms",
+                }}
+              >
+                <div className="p-2 bg-primary/10 rounded-lg">
+                  <Icon className={`h-6 w-6 ${achievement.color}`} />
+                </div>
+                <div>
+                  <p className="font-bold text-base sm:text-lg text-foreground">{achievement.value}</p>
+                  <p className="text-sm text-muted-foreground">{achievement.label}</p>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
-    </section>
+
+      {/* Right Column */}
+      <div className={`space-y-6 sm:space-y-8 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}>
+        {stats.map((stat, index) => {
+          const Icon = stat.icon
+          const percentage = (animatedValues[index] / stat.max) * 100
+
+          return (
+            <Card
+              key={index}
+              className={`border-2 border-border transition-all duration-700 ease-in-out ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+            >
+              <CardContent className="p-6 sm:p-8">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 mb-4 sm:mb-6">
+                  <div className={`p-4 ${stat.bgColor} rounded-2xl self-start`}>
+                    <Icon className={`h-8 w-8 ${stat.color}`} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col sm:flex-row justify-between sm:items-center mb-2 sm:mb-3 gap-2">
+                      <span className="font-semibold text-base sm:text-lg text-foreground">{stat.label}</span>
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <span className="text-xl sm:text-2xl font-bold text-foreground">
+                          {animatedValues[index]}
+                          {stat.max === 100 ? "%" : `/${stat.max}`}
+                        </span>
+                        <Badge variant="secondary" className="text-xs sm:text-sm font-medium">
+                          {stat.max === 100 ? "Expert" : "Active"}
+                        </Badge>
+                      </div>
+                    </div>
+                    <Progress value={percentage} className="h-3 sm:h-4 mb-2 sm:mb-3" />
+                    <p className="text-sm text-muted-foreground leading-relaxed">{stat.description}</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          )
+        })}
+      </div>
+    </div>
+  </div>
+</section>
+
   )
 }
